@@ -1,6 +1,7 @@
 node{
     stage("Prepare environment") {
         echo "Starting the process"
-        sh "./mvnw clean install"
+        sh "java -version"
+        sh "mvn clean install"
     }
 }
