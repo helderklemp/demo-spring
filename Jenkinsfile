@@ -18,9 +18,8 @@ node{
         stage("deploy"){
             def userInput = input(
                     id: 'userInput', message: 'Let\'s deploy?', parameters: [
-                    [$class: 'TextParameterDefinition', defaultValue: 'S3', description: 'Environment', name: 'env']
-                    ]
-                    echo ("Env: "+userInput))
+                    [$class: 'TextParameterDefinition', defaultValue: 'S3', description: 'Environment', name: 'env']])
+            echo ("Env: "+userInput)
         }
     }
 }
