@@ -1,9 +1,13 @@
 node{
-    stage("Prepare environment") {
-        def mvnHome = tool 'mvn3.5.0'
+    def mvnHome = tool 'mvn3.5.0'
+    stage("checkout") {
         checkout scm
-        echo "Starting the process"
-        sh "${mvnHome}/bin/mvn clean install"
+    }
 
+    stage("Unit Tests") {
+        sh "${mvnHome}/bin/mvn clean test"
+    }
+    stage("Packaging") {
+        sh "${mvnHome}/bin/mvn install"
     }
 }
