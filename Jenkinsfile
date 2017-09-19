@@ -1,6 +1,6 @@
 
 node{
-    def mvnHome = tool 'mvn3.5.0'
+    def mvnHome = tool 'Maven 3.5.x'
     // What branch are we running in?
     def branchType = branch()
     stage("checkout") {
