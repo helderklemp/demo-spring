@@ -1,8 +1,8 @@
-def mvnHome = tool 'mvn3.5.0'
-// What branch are we running in?
-def branchType = gitUtils.branch()
-node{
 
+node{
+    def mvnHome = tool 'mvn3.5.0'
+    // What branch are we running in?
+    def branchType = gitUtils.branch()
     stage("checkout") {
         checkout scm
     }
