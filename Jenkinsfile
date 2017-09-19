@@ -1,10 +1,10 @@
 node{
     stage("Prepare environment") {
-        echo "Starting the process"
-        withMaven(maven: "3.5.0"){
-            sh "mvn clean install"
+        tools {
+            maven "mvn3.5.0"
         }
-
+        echo "Starting the process"
+        sh "mvn clean install"
 
     }
 }
