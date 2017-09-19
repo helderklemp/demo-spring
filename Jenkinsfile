@@ -9,10 +9,7 @@ node{
     }
 
     stage("Unit Tests") {
-        docker.image('maven:3.5.0-jdk-8').inside {
-            sh "${mvnHome}/bin/mvn clean test"
-        }
-
+        sh "${mvnHome}/bin/mvn clean test"
     }
     stage("Packaging") {
         sh "${mvnHome}/bin/mvn install"
