@@ -1,7 +1,7 @@
 
 node{
     def mvnHome = tool 'Maven 3.5.x'
-    env.JAVA_HOME="${tool 'Oracle JDK 1.8 (latest)'"
+    env.JAVA_HOME="${tool 'Oracle JDK 1.8 (latest)'}"
     // What branch are we running in?
     def branchType = branch()
     stage("checkout") {
